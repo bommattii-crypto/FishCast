@@ -45,72 +45,60 @@
 
     <section class="hero">
 
-        <h1 id="temperature">
+    <div class="weatherHeader">
 
-            --
+        <h1 id="temperature">--</h1>
 
-        </h1>
-
-        <p id="weather">
-
-            Pobieranie pogody...
-
-        </p>
-
-        <div id="fishScore">
-
-            <div class="scoreCircle">
-
-                <svg viewBox="0 0 160 160">
-
-                    <defs>
-
-    <linearGradient id="gradient">
-
-        <stop offset="0%" stop-color="#22e2c4" />
-
-        <stop offset="100%" stop-color="#4bc6ff" />
-
-    </linearGradient>
-
-</defs>
-
-                    <circle
-                            cx="80"
-                            cy="80"
-                            r="70"
-                            class="bgCircle"
-                    ></circle>
-
-                    <circle
-                            cx="80"
-                            cy="80"
-                            r="70"
-                            class="progressCircle"
-                    ></circle>
-
-                </svg>
-
-                <div class="scoreText">
-
-    <span id="scoreValue">
-        --
-    </span>
-
-    <small>FishScore</small>
-
-    <div id="scoreStatus">
-
-        Analizuję...
+        <p id="weather">Pobieranie pogody...</p>
 
     </div>
 
-</div>
+    <div id="fishScore">
+
+        <div class="scoreCircle">
+
+            <svg viewBox="0 0 160 160">
+
+                <defs>
+                    <linearGradient id="gradient">
+                        <stop offset="0%" stop-color="#22e2c4"/>
+                        <stop offset="100%" stop-color="#4bc6ff"/>
+                    </linearGradient>
+                </defs>
+
+                <circle
+                        cx="80"
+                        cy="80"
+                        r="70"
+                        class="bgCircle">
+                </circle>
+
+                <circle
+                        cx="80"
+                        cy="80"
+                        r="70"
+                        class="progressCircle">
+                </circle>
+
+            </svg>
+
+            <div class="scoreText">
+
+                <span id="scoreValue">--</span>
+
+                <small>FishScore</small>
+
+                <div id="scoreStatus">
+                    Analizuję...
+                </div>
+
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <section class="cards">
