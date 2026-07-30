@@ -143,7 +143,7 @@ function updateUI(data) {
 
     humidity.innerHTML = `${humidityValue}%`;
 
-    sunset.innerHTML = formatTime(daily.sunset[0]);
+    sunset.innerHTML = `${temp}°`;
 
     const score = calculateFishScore({
 
@@ -163,15 +163,15 @@ const message = scoreMessage(score);
 
 recommendation.innerHTML = message;
 
-scoreStatus.innerHTML = message;
+if (scoreStatus) {
+    scoreStatus.innerHTML = message;
+}
 
 applyTheme(current.weather_code, score);
 
 animateCards();
 
 updateSpecies(score);
-
-}
 
 // ==========================================
 // WEATHER TRANSLATION
@@ -504,3 +504,109 @@ function updateSpecies(score){
     carpBar.style.width = carp + "%";
 
 }
+const sheet=document.getElementById("bottomSheet");
+
+const overlay=document.getElementById("sheetOverlay");
+
+const closeSheet=document.getElementById("closeSheet");
+
+let chart;
+
+function openChart(title,data){
+
+document.getElementById("sheetTitle").textContent=title;
+
+sheet.classList.add("show");
+
+overlay.classList.add("show");
+
+if(chart){
+
+chart.destroy();
+
+}
+
+chart=new Chart(document.getElementById("historyChart"),{
+
+type:"line",
+
+data:{
+
+labels:["00","03","06","09","12","15","18","21"],
+
+datasets:[{
+
+data:data,
+
+borderColor:"#22e2c4",
+
+borderWidth:4,
+
+pointRadius:4,
+
+fill:false,
+
+tension:.35
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+maintainAspectRatio:false,
+
+plugins:{
+
+legend:{display:false}
+
+},
+
+scales:{
+
+x:{
+
+ticks:{color:"#aaa"}
+
+},
+
+y:{
+
+ticks:{color:"#aaa"}
+
+}
+
+}
+
+}
+
+});
+
+}
+
+closeSheet.onclick=()=>{
+
+sheet.classList.remove("show");
+
+overlay.classList.remove("show");
+
+};
+
+overlay.onclick=closeSheet.onclick;
+document.querySelector("#wind").closest(".card").addEventListener("click", () => {
+    openChart("Wiatr (km/h)", [3,5,6,7,9,8,6,4]);
+});
+
+document.querySelector("#pressure").closest(".card").addEventListener("click", () => {
+    openChart("Ciśnienie (hPa)", [1012,1013,1014,1015,1016,1015,1014,1013]);
+});
+
+document.querySelector("#humidity").closest(".card").addEventListener("click", () => {
+    openChart("Wilgotność (%)", [90,88,82,76,65,60,70,84]);
+});
+
+document.querySelector("#temperatureCard").closest(".card").addEventListener("click", () => {
+    openChart("Temperatura (°C)", [16,17,19,22,26,28,24,20]);
+});

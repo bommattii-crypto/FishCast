@@ -54,7 +54,7 @@
                 --
             </span>
 
-            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-thermometer"></i>
 
         </div>
 
@@ -168,27 +168,21 @@
 
 
 
-        <div class="card">
+       <div class="card">
 
-            <div class="icon">
+    <div class="icon">
+        <i class="fa-solid fa-temperature-three-quarters"></i>
+    </div>
 
-                <i class="fa-solid fa-sun"></i>
+    <div class="title">
+        Temperatura
+    </div>
 
-            </div>
+    <div class="value" id="temperatureCard">
+        --
+    </div>
 
-            <div class="title">
-
-                Zachód
-
-            </div>
-
-            <div class="value" id="sunset">
-
-                --
-
-            </div>
-
-        </div>
+</div>
 
 
 
@@ -324,12 +318,30 @@
             <i class="fa-solid fa-gear"></i>
 
         </div>
+        </nav>
 
-    </nav>
+<div id="bottomSheet">
+
+    <div class="sheetHandle"></div>
+
+    <div class="sheetHeader">
+
+        <h2 id="sheetTitle">Wiatr</h2>
+
+        <button id="closeSheet">✕</button>
+
+    </div>
+
+    <canvas id="historyChart"></canvas>
+
+</div>
+
+<div id="sheetOverlay"></div>
 
 </div>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 </html>
