@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FishCast</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="background"></div>
+
+<div class="app">
+
+    <header>
+
+        <div class="location">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <span id="city">
+                Lokalizowanie...
+            </span>
+
+        </div>
+
+        <div class="menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+
+        <h1 id="temperature">
+
+            --
+
+        </h1>
+
+        <p id="weather">
+
+            Pobieranie pogody...
+
+        </p>
+
+        <div id="fishScore">
+
+            <div class="scoreCircle">
+
+                <svg viewBox="0 0 160 160">
+
+                    <defs>
+
+    <linearGradient id="gradient">
+
+        <stop offset="0%" stop-color="#22e2c4" />
+
+        <stop offset="100%" stop-color="#4bc6ff" />
+
+    </linearGradient>
+
+</defs>
+
+                    <circle
+                            cx="80"
+                            cy="80"
+                            r="70"
+                            class="bgCircle"
+                    ></circle>
+
+                    <circle
+                            cx="80"
+                            cy="80"
+                            r="70"
+                            class="progressCircle"
+                    ></circle>
+
+                </svg>
+
+                <div class="scoreText">
+
+    <span id="scoreValue">
+        --
+    </span>
+
+    <small>FishScore</small>
+
+    <div id="scoreStatus">
+
+        Analizuję...
+
+    </div>
+
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cards">
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-wind"></i>
+
+            </div>
+
+            <div class="title">
+
+                Wiatr
+
+            </div>
+
+            <div class="value" id="wind">
+
+                --
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+            </div>
+
+            <div class="title">
+
+                Ciśnienie
+
+            </div>
+
+            <div class="value" id="pressure">
+
+                --
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-sun"></i>
+
+            </div>
+
+            <div class="title">
+
+                Zachód
+
+            </div>
+
+            <div class="value" id="sunset">
+
+                --
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="icon">
+
+                <i class="fa-solid fa-water"></i>
+
+            </div>
+
+            <div class="title">
+
+                Wilgotność
+
+            </div>
+
+            <div class="value" id="humidity">
+
+                --
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="recommendation">
+
+    
+    <h2>🎣 Analiza dnia</h2>
+
+    <p id="recommendationText">
+
+        Analizuję warunki...
+
+    </p>
+
+    <div class="species">
+
+        <div class="speciesRow">
+
+            <span>🐊 Szczupak</span>
+
+            <strong id="pikeScore">--</strong>
+
+        </div>
+
+        <div class="speciesBar">
+
+            <div id="pikeBar"></div>
+
+        </div>
+
+        <div class="speciesRow">
+
+            <span>🐟 Okoń</span>
+
+            <strong id="perchScore">--</strong>
+
+        </div>
+
+        <div class="speciesBar">
+
+            <div id="perchBar"></div>
+
+        </div>
+
+        <div class="speciesRow">
+
+            <span>🐟 Sandacz</span>
+
+            <strong id="zanderScore">--</strong>
+
+        </div>
+
+        <div class="speciesBar">
+
+            <div id="zanderBar"></div>
+
+        </div>
+
+        <div class="speciesRow">
+
+            <span>🎣 Karp</span>
+
+            <strong id="carpScore">--</strong>
+
+        </div>
+
+        <div class="speciesBar">
+
+            <div id="carpBar"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <nav>
+
+        <div class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-fish"></i>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-map-location-dot"></i>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+
+        <div>
+
+            <i class="fa-solid fa-gear"></i>
+
+        </div>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
