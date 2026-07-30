@@ -339,7 +339,7 @@ function animateScore(score){
 
         const circle=document.querySelector(".progressCircle");
 
-        const circumference=440;
+        const circumference=553;
 
         const offset=circumference-(score/100)*circumference;
 
