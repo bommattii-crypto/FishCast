@@ -486,3 +486,21 @@ function animateCards(){
     });
 
 }
+function updateSpecies(score){
+
+    const pike = Math.min(100, score + 5);
+    const perch = Math.max(0, score);
+    const zander = Math.max(0, score - 8);
+    const carp = Math.max(0, score - 18);
+
+    pikeScore.textContent = pike;
+    perchScore.textContent = perch;
+    zanderScore.textContent = zander;
+    carpScore.textContent = carp;
+
+    pikeBar.style.width = pike + "%";
+    perchBar.style.width = perch + "%";
+    zanderBar.style.width = zander + "%";
+    carpBar.style.width = carp + "%";
+
+}

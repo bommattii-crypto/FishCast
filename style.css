@@ -198,6 +198,58 @@ transition:.3s;
 
 }
 
+.leftHeader{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.rightHeader{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:12px;
+
+}
+
+.temperatureSmall{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.temperatureSmall i{
+
+    color:#FFD54A;
+
+    font-size:1.5rem;
+
+}
+
+#weatherSmall{
+
+    color:var(--muted);
+
+    font-size:.95rem;
+
+}
+
 .menu:hover{
 
 transform:scale(1.06);
@@ -210,13 +262,11 @@ transform:scale(1.06);
 
 display:flex;
 
-flex-direction:column;
+justify-content:center;
 
 align-items:center;
 
-gap:22px;
-
-margin-bottom:28px;
+margin:20px 0 35px;
 
 }
 
@@ -258,11 +308,11 @@ gap:6px;
 
 .scoreCircle{
 
-width:170px;
+width:310px;
 
-height:170px;
+height:310px;
 
-margin:0 auto;
+margin:auto;
 
 position:relative;
 
@@ -276,9 +326,9 @@ align-items:center;
 
 .scoreCircle svg{
 
-width:170px;
+width:310px;
 
-height:170px;
+height:310px;
 
 position:absolute;
 
@@ -288,33 +338,31 @@ transform:rotate(-90deg);
 
 .bgCircle{
 
-fill:none;
+    fill:none;
 
-stroke:rgba(255,255,255,.08);
+    stroke:rgba(255,255,255,.06);
 
-stroke-width:12;
+    stroke-width:8;
 
 }
 
 .progressCircle{
 
-fill:none;
+    fill:none;
 
-stroke:url(#gradient);
+    stroke:url(#gradient);
 
-stroke:#22e2c4;
+    stroke-width:8;
 
-stroke-width:12;
+    stroke-linecap:round;
 
-stroke-linecap:round;
+    stroke-dasharray:440;
 
-stroke-dasharray:440;
+    stroke-dashoffset:120;
 
-stroke-dashoffset:120;
+    filter:drop-shadow(0 0 12px rgba(34,226,196,.35));
 
-filter:drop-shadow(0 0 18px rgba(34,226,196,.7));
-
-transition:1s;
+    transition:1s;
 
 }
 
@@ -332,9 +380,11 @@ align-items:center;
 
 #scoreValue{
 
-font-size:2.7rem;
+font-size:6rem;
 
 font-weight:800;
+
+line-height:1;
 
 }
 
@@ -377,7 +427,7 @@ text-transform:uppercase;
 
     -webkit-backdrop-filter:blur(35px);
 
-    padding:22px;
+    padding:18px;
 
     box-shadow:var(--shadow);
 
@@ -427,9 +477,9 @@ text-transform:uppercase;
 
 .icon{
 
-    width:52px;
+    width:46px;
 
-    height:52px;
+    height:46px;
 
     border-radius:18px;
 
@@ -449,7 +499,7 @@ text-transform:uppercase;
 
 .icon i{
 
-    font-size:22px;
+    font-size:20px;
 
     color:var(--accent);
 
@@ -702,7 +752,7 @@ nav{
 
 .value{
 
-    font-size:1.35rem;
+    font-size:1.45rem;
 
 }
 
