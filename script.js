@@ -19,7 +19,7 @@ const weather = document.getElementById("weather");
 const wind = document.getElementById("wind");
 const pressure = document.getElementById("pressure");
 const humidity = document.getElementById("humidity");
-const sunset = document.getElementById("sunset");
+const temperatureCard = document.getElementById("temperatureCard");
 
 const scoreValue = document.getElementById("scoreValue");
 const scoreStatus = document.getElementById("scoreStatus");
@@ -104,7 +104,6 @@ async function getWeather(lat, lon) {
 
 `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}
 &current=temperature_2m,relative_humidity_2m,pressure_msl,wind_speed_10m,weather_code
-&daily=sunset
 &timezone=auto`
 .replace(/\n/g,'');
 
@@ -143,7 +142,7 @@ function updateUI(data) {
 
     humidity.innerHTML = `${humidityValue}%`;
 
-    sunset.innerHTML = `${temp}°`;
+    temperatureCard.innerHTML = `${temp}°`;
 
     const score = calculateFishScore({
 
@@ -172,6 +171,7 @@ applyTheme(current.weather_code, score);
 animateCards();
 
 updateSpecies(score);
+}
 
 // ==========================================
 // WEATHER TRANSLATION
